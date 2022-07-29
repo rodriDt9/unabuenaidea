@@ -1,0 +1,335 @@
+//linea de comentario
+
+//nesting
+
+/*Body index*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-family: 'Merienda', cursive;
+}
+
+.body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 18% 45% 6;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    row-gap: 10px;
+    .header {
+        grid-area: header;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url(../img/brazilian-chimarrao.webp);
+        height: 70vh;
+        background-size: cover;
+        background-position: center;
+        color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .navbar {
+            display: flex;
+            background-color: pink;
+            justify-content: end;
+        }
+    }
+    .main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        grid-template-areas: "contenedorTitulo contenedorTitulo contenedorTitulo"
+            "contenedorImagenUno contenedorImagenDos contenedorImagenTres"
+            "divMate divMate divMate";
+        color: whitesmoke;
+        background-color: pink;
+        .contenedorTitulo {
+            grid-area: contenedorTitulo;
+            display: flex;
+            text-align: center;
+            margin-top: 5rem;
+            box-shadow: 1px 1px 1px;
+            h2{
+                box-shadow: 1px 1px 1px;
+            }
+            h3{
+                box-shadow: 1px 1px 1px;
+            }
+            p{
+                box-shadow: 1px 1px 1px;
+            }
+        }
+        .contenedorImagenUno {
+            grid-area: contenedorImagenUno;
+            text-align: center;
+            align-self: end;
+            box-shadow: 1px 1px 1px;
+        }
+        .contenedorImagenDos {
+            grid-area: contenedorImagenDos;
+            text-align: center;
+            align-self: end;
+            box-shadow: 1px 1px 1px;
+        }
+        .contenedorImagenTres {
+            grid-area: contenedorImagenTres;
+            text-align: center;
+            align-self: end;
+            box-shadow: 1px 1px 1px;
+        }
+        .divMate {
+            grid-area: divMate;
+            display: flex;
+            text-align: center;
+            background-color: aqua;
+            display: flex;
+            flex-direction: column;
+            font-size: 2rem;
+            color: white;
+            background: pink;
+            margin-top: 5px;
+            justify-content: space-evenly;
+            height: 40rem;
+            background-image: url(../img/R.jpg);
+            margin-top: 15px;
+        }
+    }
+    .footer {
+        grid-area: footer;
+        display: flex;
+        justify-content: space-between;
+        background-color: pink;
+        box-shadow: 1px 1px 1px black; 
+    }
+}
+
+/*body galeria*/
+.bodyG {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 18% 45% 6;
+    grid-template-areas:
+        "header header header"
+        "mainG mainG mainG"
+        "footer footer footer";
+    row-gap: 10px;
+    .mainG {
+        grid-area: mainG;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row: 20% 80% 20%;
+        grid-template-areas: "mainTitutloGaleria mainTitutloGaleria mainTitutloGaleria"
+            "carrusel carrusel carrusel"
+            "mainParrafoGaleria mainParrafoGaleria mainParrafoGaleria";
+        background-color: pink;
+        .mainTitutloGaleria {
+            grid-area: mainTitutloGaleria;
+            display: flex;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            margin-top: 6rem;
+            box-shadow: 6px 6px 6px;
+        }
+        .carrusel {
+            grid-area: carrusel;
+            margin-top: 10rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            #carouselExampleControls {
+                box-shadow: 0px 2px 20px rgba(red, green, blue, alpha) (0, 0, 0, 0.9);
+                border-radius: 10px;
+                overflow: hidden;
+                transition: all 400ms ease;
+            }
+            #carouselExampleControls:hover {
+                box-shadow: 5px 5px 20px rgba(red, green, blue, alpha) (0, 0, 0, 0.9);
+                transform: scale(1.3)
+            }
+        }
+        .mainParrafoGaleria {
+            grid-area: mainParrafoGaleria;
+            margin-top: 9rem;
+            text-align: center;
+            margin-bottom: 8rem;
+            color: white;
+            font-size: 1.4rem;
+            box-shadow: 1px 1px 1px;
+        }
+
+    }
+}
+
+/*body nosotros*/
+.bodyN {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 18% 45% 6;
+    grid-template-areas:
+        "header header header"
+        "mainN mainN mainN"
+        "footer footer footer";
+    row-gap: 10px;
+    .mainN {
+        display: grid;
+        grid-area: mainN;
+        grid-template-areas: "TitutloMainN TitutloMainN TitutloMainN"
+            "parrafoMainN parrafoMainN parrafoMainN"
+            "contenedorCardUno contenedorCardDos contenedorCardTres";
+        background-color: pink;
+        .TitutloMainN {
+            grid-area: TitutloMainN;
+            text-align: center;
+            color: white;
+            margin-top: 7rem;
+            font-size: 3rem;
+            box-shadow: 6px 6px 6px;
+        }
+        .parrafoMainN {
+            grid-area: parrafoMainN;
+            text-align: center;
+            color: white;
+            margin-top: 15rem;
+            font-size: 1.7rem;
+            display: flex;
+            box-shadow: 1px 1px 1px;
+        }
+        .contenedorCardUno {
+            grid-area: contenedorCardUno;
+            margin: 20px;
+            text-align: center;
+            background-color: rgb(207, 64, 88);
+            border-radius: 20px;
+            transition: all 400ms ease;
+            margin-top: 15rem;
+            margin-bottom: 7rem;
+            .card {
+                background-color: rgb(192, 68, 89);
+                color: white;
+                overflow: hidden;
+                border-radius: 20px;
+                box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+                transition: all 400ms ease;
+            }
+            .card:hover {
+                box-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
+                transform: translateY(-3%);
+            }
+        }
+        .contenedorCardDos {
+            grid-area: contenedorCardDos;
+            margin: 20px;
+            text-align: center;
+            border-radius: 20px;
+            transition: all 400ms ease;
+            margin-top: 15rem;
+            background-color: rgb(207, 64, 88);
+            margin-bottom: 7rem;
+            .card {
+                background-color: rgb(192, 68, 89);
+                color: white;
+                overflow: hidden;
+                border-radius: 20px;
+                box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+                transition: all 400ms ease;
+                .card:hover {
+                    box-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
+                    transform: translateY(-3%);
+                }
+            }
+        }
+        .contenedorCardTres {
+            grid-area: contenedorCardTres;
+            margin: 20px;
+            text-align: center;
+            border-radius: 20px;
+            transition: all 400ms ease;
+            margin-top: 15rem;
+            background-color: rgb(207, 64, 88);
+            margin-bottom: 7rem;
+            .card {
+                background-color: rgb(192, 68, 89);
+                color: white;
+                overflow: hidden;
+                border-radius: 20px;
+                box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+                transition: all 400ms ease;
+                .card:hover {
+                    box-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
+                    transform: translateY(-3%);
+                }
+            }
+        }
+    }
+}
+
+/*body mates termos bombillas*/
+.bodyMates {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 18% 45% 6;
+    grid-template-areas:
+        "header header header"
+        "mainMates mainMates mainMates"
+        "footer footer footer";
+    row-gap: 10px;
+    .mainMates {
+        column-gap: 1rem;
+        background-color: pink;
+        grid-area: mainMates;
+        display: grid;
+        grid-template-areas: "mainMatesTitulo mainMatesTitulo mainMatesTitulo"
+            "contenedorCardMatesUno contenedorCardMatesDos contenedorCardMatesTres"
+            "contenedorCardMatesCuatro contenedorCardMatesCinco contenedorCardMatesSeis";
+            .mainMatesTitulo {
+                grid-area: mainMatesTitulo;
+                color: white;
+                margin-top: 4rem;
+                box-shadow: 6px 6px 6px;
+                text-align: center;
+            }
+            .contenedorCardMatesUno {
+                grid-area: contenedorCardMatesUno;
+                width: 300px;
+                margin: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 5rem; 
+            }
+            .contenedorCardMatesDos {
+                grid-area: contenedorCardMatesDos;
+                width: 300px;
+                margin: 20px;
+                flex-wrap: wrap;
+                margin-top: 5rem;
+            }
+            .contenedorCardMatesTres {
+                grid-area: contenedorCardMatesTres;
+                width: 300px;
+                margin: 20px;
+                flex-wrap: wrap;
+                margin-top: 5rem;
+            }
+            .contenedorCardMatesCuatro {
+                grid-area: contenedorCardMatesCuatro;
+                width: 300px;
+                margin: 20px;
+                flex-wrap: wrap;
+            }
+            .contenedorCardMatesCinco {
+                grid-area: contenedorCardMatesCinco;
+                width: 300px;
+                margin: 20px;
+                flex-wrap: wrap;
+            }
+            .contenedorCardMatesSeis {
+                grid-area: contenedorCardMatesSeis;
+                width: 300px;
+                margin: 20px;
+                flex-wrap: wrap;
+            }
+    }
+}
